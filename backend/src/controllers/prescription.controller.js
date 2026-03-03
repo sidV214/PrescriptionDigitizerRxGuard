@@ -1,4 +1,4 @@
-import Prescription from '../models/prescription.model.js';
+import Prescription from '../models/Prescription.model.js';
 import { processPrescriptionAsync } from '../services/prescription.processor.js';
 import logger from '../utils/logger.js';
 
