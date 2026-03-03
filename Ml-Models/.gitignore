@@ -70,7 +70,6 @@ data/test_data/
 results/
 outputs/
 *.json
-*.txt
 logs/
 *.log
 
