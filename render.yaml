@@ -1,0 +1,34 @@
+services:
+  - type: web
+    name: rxguard-backend
+    env: node
+    plan: free
+    region: ohio
+    buildCommand: "cd backend && npm install"
+    startCommand: "cd backend && npm start"
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 8000
+      - key: ML_SERVICE_URL
+        value: "https://rxguard-ml.onrender.com"
+      - key: CORS_ORIGINS
+        value: "https://rxguard-ai.vercel.app" # You can update this to your exact Vercel frontend URL
+      - key: MONGODB_URI
+        sync: false # Set this securely in the Render dashboard!
+      - key: JWT_SECRET
+        sync: false # Set this securely in the Render dashboard!
+
+  - type: web
+    name: rxguard-ml
+    env: python
+    plan: free
+    region: ohio
+    buildCommand: "cd Ml-Models && pip install -r requirements.txt"
+    startCommand: "cd Ml-Models && uvicorn run_api:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.0
+      - key: PORT
+        value: 5000
