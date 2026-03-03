@@ -26,7 +26,7 @@ services:
     plan: free
     region: ohio
     buildCommand: "cd Ml-Models && pip install -r requirements.txt"
-    startCommand: "cd Ml-Models && uvicorn run_api:app --host 0.0.0.0 --port $PORT"
+    startCommand: "cd Ml-Models && uvicorn main:app --host 0.0.0.0 --port $PORT"
     envVars:
       - key: PYTHON_VERSION
         value: 3.10.0
