@@ -1,0 +1,102 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# Testing
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+
+# ML Model files (optional - comment out if you want to track these)
+*.pkl
+*.joblib
+*.h5
+*.pth
+pytorch_model.bin
+
+# EasyOCR models
+~/.EasyOCR/
+
+# Data files (keep small CSVs, ignore large datasets)
+*.csv.bak
+data/sample_prescriptions/
+data/training_data/
+data/test_data/
+
+# Output files
+results/
+outputs/
+*.json
+*.txt
+logs/
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Project specific
+.env
+config_local.py
+prescriptions/raw/
+prescriptions/processed/
+
+# Large files
+*.zip
+*.tar.gz
+*.rar
+
+# Cache
+.cache/
